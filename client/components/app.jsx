@@ -1,15 +1,17 @@
 import React from 'react';
 import Header from './header';
 import Productlistitem from './product-list-item';
+import Productlist from './product-list';
 
 export default class App extends React.Component {
   render() {
     return (
-      <React.Fragment>
+      <div>
 
         <Header />
         <Productlistitem />
-      </React.Fragment>
+        <Productlist />
+      </div>
     );
   }
 }
