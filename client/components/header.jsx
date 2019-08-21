@@ -3,9 +3,10 @@ import React from 'react';
 class Header extends React.Component {
   render() {
     return (
-      <div>
-        <h2> Wicked Sales</h2>
-        <img src="/Images/WickedLogo.png" alt="Logo" />
+      <div className="header">
+        <h2> Wicked Sales
+          <img src="/Images/WickedLogo.png" alt="Logo" />
+        </h2>
       </div>
     );
   }
