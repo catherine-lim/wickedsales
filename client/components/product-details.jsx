@@ -12,7 +12,6 @@ export default class ProductDetails extends React.Component {
       .then(response => response.json())
       .then(data => this.setState({ product: data }));
   }
-
   render() {
     return (
       null
