@@ -2,23 +2,16 @@ import React from 'react';
 
 function Productlistitem(props) {
   return (
-    <div className="productListItem">
-      <div className="row align-self-center">
-        <div className="col col-sm">
-      1 of 3
-        </div>
-        <div className="col col-sm">
-      2 of 3
-        </div>
-        <div className="col col-sm">
-      3 of 3
+    <React.Fragment>
+      <div className="card">
+        <img src= {props.image} className="card-img" />
+        <div className="card-body">
+          <h5 className="card-title">{props.name}</h5>
+          <p className="card-text">${props.price}</p>
+          <p className="card-text">{props.shortDescription}</p>
         </div>
       </div>
-
-    );
-
-    </div>
-
+    </React.Fragment>
   );
 }
 

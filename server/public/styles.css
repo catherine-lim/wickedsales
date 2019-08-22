@@ -5,15 +5,23 @@ body{
 #root{
     padding: 70px;
 }
+h2{
+    color: brown;
+}
 .header{
+    margin-bottom: 4%;
     text-align: center;
+    background-color: gray;
 }
-.productListItem{
-    display:block;
-    margin-left: auto;
-  margin-right: auto;
+.card-img{
+    width:40%;
 }
-.firstimg{
-    width: 10%;
-   
+.card{
+    margin-bottom: 4%;
+    margin-right: 4%;
+    display:inline-block;
+    width:21%;  
 }
+
+
+

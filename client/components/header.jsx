@@ -1,14 +1,16 @@
 import React from 'react';
 
-class Header extends React.Component {
+export default class Header extends React.Component {
   render() {
     return (
-      <div className="header">
-        <h2> Wicked Sales
-          <img src="/Images/WickedLogo.png" alt="Logo" />
-        </h2>
-      </div>
+      <React.Fragment>
+        <nav className="header navbar navbar-light bg-dark">
+          <h2> Wicked Sales
+
+            <i className="fas fa-cat"></i>
+          </h2>
+        </nav>
+      </React.Fragment>
     );
   }
 }
-export default Header;

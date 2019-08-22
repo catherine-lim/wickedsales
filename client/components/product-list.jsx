@@ -1,11 +1,15 @@
 import React from 'react';
+import Productlistitem from './product-list-item';
 
-class Productlist extends React.Component {
+export default class Productlist extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       products: []
     };
+  }
+  componentDidMount() {
+    this.getProducts();
   }
   getProducts() {
     fetch(`/api/products.php`)
@@ -15,5 +19,24 @@ class Productlist extends React.Component {
       });
   }
 
+  render() {
+    const product = this.state.products.map(product => {
+      return (
+        <Productlistitem key={product.id}
+          id = {product.id}
+          name = {product.name}
+          price = {product.price}
+          image = {product.image}
+          shortDescription = {product.shortDescription}/>
+      );
+    });
+    return (
+      <div className="row">
+        <div className="col col-sm">
+          {product}
+        </div>
+
+      </div>
+    );
+  }
 }
-export default Productlist;
