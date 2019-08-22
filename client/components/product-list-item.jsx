@@ -1,17 +1,25 @@
 import React from 'react';
 
-class Productlistitem extends React.Component {
-
-  render() {
-    return (
-      <div className="productListItem">
-        <img className="firstimg" src="https://bit.ly/2JtVNE6" />
-        <p><strong>Shake Weight</strong><br></br>
-         Price: $29.99<br></br>
-         Dynamic Inertia technology ignites muscles in arms, shoulders, and chest.</p>
+function Productlistitem(props) {
+  return (
+    <div className="productListItem">
+      <div className="row align-self-center">
+        <div className="col col-sm">
+      1 of 3
+        </div>
+        <div className="col col-sm">
+      2 of 3
+        </div>
+        <div className="col col-sm">
+      3 of 3
+        </div>
       </div>
 
     );
-  }
+
+    </div>
+
+  );
 }
+
 export default Productlistitem;

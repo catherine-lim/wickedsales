@@ -7,22 +7,13 @@ class Productlist extends React.Component {
       products: []
     };
   }
-  render() {
-    return (
-      <div className="row align-self-center">
-        <div className="col col-sm">
-      1 of 3
-        </div>
-        <div className="col col-sm">
-      2 of 3
-        </div>
-        <div className="col col-sm">
-      3 of 3
-        </div>
-      </div>
-
-    );
-
+  getProducts() {
+    fetch(`/api/products.php`)
+      .then(response => response.json())
+      .then(response => {
+        this.setState({ products: response });
+      });
   }
+
 }
 export default Productlist;
