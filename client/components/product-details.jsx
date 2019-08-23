@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Productlistitem from './product-list-item';
+
 export default class ProductDetails extends React.Component {
   constructor(props) {
     super(props);
@@ -8,18 +10,21 @@ export default class ProductDetails extends React.Component {
     };
   }
   componentDidMount() {
-    fetch(`/api/products.php?id=1`)
+    fetch('/api/products.php?id=1')
       .then(response => response.json())
       .then(data => this.setState({ product: data }));
   }
   render() {
-    return (
-      <ProductDetails key={this.state.product.id}
-        id = {this.state.product.id}
-        name = {this.state.product.name}
-        price = {this.state.product.price}
-        image = {this.state.product.image}
-        shortDescription = {this.state.product.shortDescription}/>
-    );
+    if (this.state.product !== null) {
+      return (
+        <Productlistitem key={this.state.product.id}
+          id = {this.state.product.id}
+          name = {this.state.product.name}
+          price = {this.state.product.price}
+          image = {this.state.product.image}
+          shortDescription = {this.state.product.shortDescription}/>
+      );
+    }
+    return null;
   }
 }
