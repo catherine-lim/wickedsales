@@ -3,11 +3,23 @@ require_once('./functions.php');
 set_exception_handler('error_handler');
 set_error_handler('error_handler');
 
+startup();
 
 require_once('./db_connection.php');
 
 
-$output = file_get_contents('./dummy-products-list.json');
-print($output);
+$query = "SELECT * FROM `products`";
+$result = mysqli_query($conn,$query);
+
+if (!$result){
+    throw new Exception("Connect failed: " . mysqli_error());
+}
+$output = array();
+
+while($row = mysqli_fetch_assoc($result)){
+    $output[] = $row;
+};
+print(json_encode( $output));
+
 
 ?>
