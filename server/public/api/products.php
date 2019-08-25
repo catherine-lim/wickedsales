@@ -7,19 +7,22 @@ startup();
 
 require_once('./db_connection.php');
 
+if(empty($_GET['id'])){
+ $whereClause = '';
+} else{
+ $whereClause = "WHERE id = " . $_GET['id'];
+}
 
-$query = "SELECT * FROM `products`";
-$result = mysqli_query($conn,$query);
+$query = "SELECT * FROM `products` " .$whereClause;
 
-if (!$result){
+$result = mysqli_query($conn, $query);
+if(!$result){
     throw new Exception("Connect failed: " . mysqli_error());
 }
 $output = array();
 
-while($row = mysqli_fetch_assoc($result)){
-    $output[] = $row;
+while ($row = mysqli_fetch_assoc($result)) {
+ $output[] = $row;
 };
-print(json_encode( $output));
-
-
+print(json_encode($output));
 ?>
