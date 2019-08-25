@@ -15,8 +15,9 @@ if(empty($_GET['id'])){
 
 if(!is_numeric($_GET['id'])){
     throw new Exception("id needs to be a number");
+} else {
+    throw new Exception("invalid ID:" . ($_GET['id']));
 }
-
 
 $query = "SELECT * FROM `products` " .$whereClause;
 
