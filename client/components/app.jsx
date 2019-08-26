@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './header';
 import Productlist from './product-list';
+import ProductDetails from './product-details';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -11,6 +12,7 @@ export default class App extends React.Component {
         params: {}
       }
     };
+    this.setView = this.setView.bind(this);
   }
   setView(name, params) {
     this.setState({ view: {
@@ -31,7 +33,7 @@ export default class App extends React.Component {
       return (
         <React.Fragment>
           <Header />
-          <Productlist productView={this.setView}/>
+          <ProductDetails productView={this.setView} params={this.state}/>
         </React.Fragment>
       );
     }
