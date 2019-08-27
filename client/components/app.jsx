@@ -9,11 +9,13 @@ export default class App extends React.Component {
     this.state = {
       view: {
         name: 'catalog',
-        params: {},
-        cart: []
-      }
+        params: {}
+      },
+      cart: []
     };
     this.setView = this.setView.bind(this);
+    this.addToCart = this.addToCart.bind(this);
+    this.getCartItems = this.getCartItems.bind(this);
 
   }
   componentDidmount() {
@@ -30,28 +32,34 @@ export default class App extends React.Component {
       .then(response => response.json())
       .then(data => this.setState({ cart: data }));
   }
+
   addToCart(product) {
     fetch(`/api/cart.php`, {
       method: 'POST',
-      body: JSON.stringify(),
+      body: JSON.stringify(product),
       headers: { 'Content-Type': 'application/json' }
-    }).then(response => response.json());
+    })
+      .then(response => response.json())
+      .then(data => {
+        const allItems = this.state.cart.concat(data);
+        this.setState({ cart: allItems });
 
+      });
   }
 
   render() {
     if (this.state.view.name === 'catalog') {
       return (
         <React.Fragment>
-          <Header />
-          <Productlist productView={this.setView}/>
+          <Header cartItemCount={this.state.cart.length}/>
+          <Productlist productView={this.setView} />
         </React.Fragment>
       );
     } else if (this.state.view.name === 'details') {
       return (
         <React.Fragment>
-          <Header />
-          <ProductDetails productView={this.setView} params={this.state}/>
+          <Header cartItemCount={this.state.cart.length}/>
+          <ProductDetails productView={this.setView} params={this.state} addTocart={this.addToCart}/>
         </React.Fragment>
       );
     }

@@ -21,6 +21,9 @@ export default class ProductDetails extends React.Component {
           <button type="button"
             onClick={() => this.props.productView('catalog', {})}>Back to Catalog</button>
 
+          <button type="button"
+            onClick={() => this.props.addTocart(this.state.product)}>Add to Cart</button>
+
           <img src= {this.state.product.image} className="card-img" />
           <div className="card-body">
             <h5 className="card-title">{this.state.product.name}</h5>
