@@ -13,8 +13,9 @@ h2{
     text-align: center;
     background-color: gray;
 }
+
 .card-img{
-    width:40%;
+    width:40%; 
 }
 .card{
     margin-bottom: 60px;
@@ -22,14 +23,20 @@ h2{
     display:inline-block;
     width:21%;  
 }
-.cart{
+.card-body{
     float: right;
+}
+.backbutton{
+    margin-bottom: 40px;
+}
+.longdescription{
+    float: left;
+    margin-top: 60px;
+}
+.cart{
     color: rgb(227, 47, 47);
 }
-.fa-shopping-cart{
-    float: right;
-    background-color: rgb(227, 47, 47);
-}
+
 
 
 

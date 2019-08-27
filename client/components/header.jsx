@@ -7,8 +7,8 @@ function Header(props) {
         <h2> Wicked Sales
           <i className="fas fa-cat"></i>
         </h2>
-        <p className="cart">Cart {props.cartItemCount}</p>
-        <i className="fas fa-shopping-cart fa-3x"></i>
+        <p className="cart"> {props.cartItemCount} items
+          <i className="fas fa-shopping-cart fa-3x"></i></p>
       </nav>
     </React.Fragment>
   );
