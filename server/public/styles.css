@@ -22,6 +22,15 @@ h2{
     display:inline-block;
     width:21%;  
 }
+.cart{
+    float: right;
+    color: rgb(227, 47, 47);
+}
+.fa-shopping-cart{
+    float: right;
+    background-color: rgb(227, 47, 47);
+}
+
 
 
 

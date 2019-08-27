@@ -9,16 +9,34 @@ export default class App extends React.Component {
     this.state = {
       view: {
         name: 'catalog',
-        params: {}
+        params: {},
+        cart: []
       }
     };
     this.setView = this.setView.bind(this);
+
+  }
+  componentDidmount() {
+    this.getCartItems();
   }
   setView(name, params) {
     this.setState({ view: {
       name: name,
       params: params
     } });
+  }
+  getCartItems() {
+    fetch(`/api/cart.php`)
+      .then(response => response.json())
+      .then(data => this.setState({ cart: data }));
+  }
+  addToCart(product) {
+    fetch(`/api/cart.php`, {
+      method: 'POST',
+      body: JSON.stringify(),
+      headers: { 'Content-Type': 'application/json' }
+    }).then(response => response.json());
+
   }
 
   render() {
