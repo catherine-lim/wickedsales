@@ -8,7 +8,7 @@ function Header(props) {
           <i className="fas fa-cat"></i>
         </h2>
         <p className="cart"> {props.cartItemCount} items
-          <i className="fas fa-shopping-cart fa-3x"></i></p>
+          <i className="fas fa-shopping-cart fa-3x" onClick= {() => props.setView('cart', {})}></i></p>
       </nav>
     </React.Fragment>
   );

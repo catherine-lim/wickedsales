@@ -8,7 +8,7 @@ export default class ProductDetails extends React.Component {
     };
   }
   componentDidMount() {
-    const paramId = this.props.viewParamsid;
+    const paramId = this.props.params.view.params.id;
     fetch(`/api/products.php?id= ` + paramId)
       .then(response => response.json())
       .then(data => this.setState({ product: data }));
@@ -17,8 +17,8 @@ export default class ProductDetails extends React.Component {
     if (this.state.product !== null) {
       return (
         <React.Fragment>
-          <button type="button" className="backbutton"
-            onClick={() => this.props.productView('catalog', {})}>Back to Catalog</button>
+          <button type="button" className= "btn btn-link mt-4"
+            onClick={() => this.props.setView('catalog', {})}> {'<'}  Back to Catalog</button>
 
           <div key={this.state.product.id} className="container">
 

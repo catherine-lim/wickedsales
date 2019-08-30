@@ -28,7 +28,7 @@ export default class Productlist extends React.Component {
           price = {product.price}
           image = {product.image}
           shortDescription = {product.shortDescription}
-          setView={this.props.productView}/>
+          setView={this.props.setView}/>
       );
     });
     return (
