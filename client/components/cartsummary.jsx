@@ -32,6 +32,8 @@ function CartSummary(props) {
       <div className= "cardSpaceItem">{items}</div>
 
       <p className="itemTotal">Item Total ${(total / 100).toFixed(2)}</p>
+      <button type="button" className= "btn btn-link mt-4" onClick= {() => props.setView('checkout', {})}>
+          Checkout </button>
 
     </div>
 
