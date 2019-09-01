@@ -24,15 +24,15 @@ function CartSummary(props) {
   });
   const total = getCartTotal(props);
   return (
-    <div className="container">
+    <div>
       <button type="button" className= "btn btn-link mt-4" onClick= {() => props.setView('catalog', {})}>
         {'<'}  Back to Catalog
       </button>
       <h5>My Cart</h5>
-      <div className= "cardSpaceItem">{items}</div>
+      <div>{items}</div>
 
-      <p className="itemTotal">Item Total ${(total / 100).toFixed(2)}</p>
-      <button type="button" className= "btn btn-link mt-4" onClick= {() => props.setView('checkout', {})}>
+      <p>Item Total ${(total / 100).toFixed(2)}</p>
+      <button type="button" className= "btn btn-primary" onClick= {() => props.setView('checkout', {})}>
           Checkout </button>
 
     </div>

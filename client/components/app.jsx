@@ -29,11 +29,10 @@ export default class App extends React.Component {
       params: params
     } });
   }
-  placeOrder() {
-
+  placeOrder(userObj) {
     fetch('/api/orders.php', {
       method: 'POST',
-      body: JSON.stringify(),
+      body: JSON.stringify(userObj),
       headers: { 'Content-Type': 'application/json' }
     })
       .then(response => response.json())
@@ -90,7 +89,7 @@ export default class App extends React.Component {
       return (
         <React.Fragment>
           <Header setView={this.setView} cartItemCount={this.state.cart.length}/>
-          <CheckoutForm setView={this.setView} cartItem={this.state.cart}/>
+          <CheckoutForm setView={this.setView} cartItem={this.state.cart} placeOrder={this.placeOrder}/>
         </React.Fragment>
       );
     }
