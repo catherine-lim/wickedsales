@@ -25,6 +25,7 @@ export default class CheckoutForm extends React.Component {
   }
   handleSubmit(event) {
     event.preventDefault();
+    this.props.placeOrder();
   }
   CartTotal() {
     var totalprice = 0;
