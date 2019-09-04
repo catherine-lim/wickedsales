@@ -18,7 +18,7 @@ export default class App extends React.Component {
     this.setView = this.setView.bind(this);
     this.addToCart = this.addToCart.bind(this);
     this.getCartItems = this.getCartItems.bind(this);
-    this.getCartItems = this.getCartItems.bind(this);
+    this.placeOrder = this.placeOrder.bind(this);
 
   }
   componentDidMount() {
@@ -97,7 +97,7 @@ export default class App extends React.Component {
       return (
         <React.Fragment>
           <Header setView={this.setView} cartItemCount={this.state.cart.length}/>
-          <CheckoutForm setView={this.setView} cartItem={this.state.cart} userObj={this.placeOrder}/>
+          <CheckoutForm setView={this.setView} cartItem={this.state.cart} placeOrder={this.placeOrder}/>
         </React.Fragment>
       );
     }

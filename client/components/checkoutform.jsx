@@ -25,7 +25,7 @@ export default class CheckoutForm extends React.Component {
   }
   handleSubmit(event) {
     event.preventDefault();
-    this.props.placeOrder();
+    this.props.placeOrder(this.state);
   }
   CartTotal() {
     var totalprice = 0;
@@ -57,12 +57,10 @@ export default class CheckoutForm extends React.Component {
               <label>Shipping Address</label>
               <textarea type="text" value={this.state.shippingAddress} onChange={this.handleChange} id="shippingAddress" className="form-control" placeholder="Your Address" />
             </div>
-
+            <button type="submit" className="pobutton btn btn-primary"> Place Order</button>
           </form>
           <button type="button" className= "btn btn-link mt-4"
             onClick={() => this.props.setView('catalog', {})}> {'<'}  Continue Shopping </button>
-
-          <button type="button" className="pobutton btn btn-primary"> Place Order</button>
 
         </div>
 
