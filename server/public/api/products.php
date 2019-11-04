@@ -15,6 +15,22 @@ if(empty($_GET['id'])){
         $whereClause = "WHERE id = " . $_GET['id'];   
 }
 
+// $subQuery = "SELECT `id`,`name`,`price`,`shortDescription`, `image`
+// FROM `products` P
+// WHERE EXISTS ( SELECT * FROM `images` WHERE `product_id` = P.id LIMIT 1)";
+// $subResult = mysqli_query($conn,$subQuery);
+// if (!$subResult) {
+//   throw new Exception('query error ' . mysqli_error($conn));
+// }
+
+// $query = " SELECT products.id, products.name, products.shortDescription, products.price, 
+// (SELECT `url` FROM `images` WHERE `product_id` = products.`id` LIMIT 1) AS image
+// FROM `products` " . $whereClause;
+
+
+
+
+
 $query = "SELECT * FROM `products` " .$whereClause;
 $result = mysqli_query($conn, $query);
 
