@@ -15,24 +15,6 @@ if(empty($_GET['id'])){
         $whereClause = "WHERE id = " . $_GET['id'];   
 }
 
-$query = "SELECT `id`,`name`,`price`,`shortDescription`, `image`
-FROM `products` P
-WHERE EXISTS ( SELECT * FROM `images` WHERE `product_id` = P.id LIMIT 1)";
-$result = mysqli_query($conn,$subQuery);
-if (!$result) {
-  throw new Exception('query error ' . mysqli_error($conn));
-}
-$query = "SELECT p.id, p.name, p.price, p.shortDescription,
-	GROUP_CONCAT(i.url) AS images
-FROM `products` AS p
-JOIN `images` AS i
-	ON p.id = i.product_id
-  WHERE {$whereClause}
-GROUP BY p.id";
-
-
-
-
 
 $query = "SELECT * FROM `products` " .$whereClause;
 $result = mysqli_query($conn, $query);
@@ -48,12 +30,6 @@ if(!$result){
 $output = array();
 
 while ($row = mysqli_fetch_assoc($result)) {
-
-
-$row['id'] = intval($row['id']);
-$row['price'] = intval($row['price']);
-$row['images'] = explode(",",$row['images']);
-
  $output[] = $row;
 };
 
