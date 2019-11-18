@@ -16,11 +16,10 @@ if(empty($_GET['id'])){
 }
 
 $query = "SELECT products.id, products.name, products.price, products.shortDescription, 
-GROUP_CONCAT(images.url) AS image
-FROM products JOIN images 
-ON products.id = images.productID " .$whereClause.
-"GROUP BY products.id" ;
-// $query = "SELECT * FROM `products` " .$whereClause;
+GROUP_CONCAT(images.url) AS imageurl
+FROM products JOIN images ON products.id = images.productId GROUP BY products.id" .$whereClause;
+
+
 $result = mysqli_query($conn, $query);
 
 if(!mysqli_num_rows($result)){
@@ -34,7 +33,7 @@ if(!$result){
 $output = array();
 
 while ($row = mysqli_fetch_assoc($result)) {
-$row['image'] = explode(",", $row['image']);
+$row['imageurl'] = explode(",", $row['imageurl']);
  $output[] = $row;
 };
 

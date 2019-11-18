@@ -19,7 +19,7 @@
   "id": 3,
   "name": "Snuggie",
   "price": 2900,
-  "image": ["https://bit.ly/2LVHYAk","images/snuggie2.jpeg"],
+  "image": ["https://bit.ly/2LVHYAk","images/snuggie1.jpeg"],
   "shortDescription": "Super-Soft Fleece with pockets! One Size fits all Adults! Keeps you Warm & Your Hands-Free!",
   "longDescription":"Donec nec eros eu nulla convallis pharetra varius vel ipsum. Fusce accumsan massa sit amet urna tempus viverra. Duis consequat libero nunc, ac pellentesque justo consectetur vitae. Pellentesque pharetra eros tortor, et porttitor nisl mattis sed. Nam sit amet eros in odio aliquet venenatis non vel nulla. Phasellus ut maximus enim, in efficitur nunc. Fusce in felis tincidunt, auctor eros eget, cursus augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
 },

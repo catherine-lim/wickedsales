@@ -10,10 +10,10 @@ $data = getBodyData();
 $id = $data['id'];
 
 if ($id) { 
-    if (gettype($id) !== "integer") { /* if $id is not a number, throw error */
+    if (gettype($id) !== "integer") {
       throw new Exception("id must be a number");
     }
-    if (intval($id) < 1) { /* if intval($id) is less than zero, throw error */
+    if (intval($id) < 1) { 
       throw new Exception("id must be greater than 0");
     }
   } else {                
@@ -30,7 +30,7 @@ if (!empty($_SESSION['cartId'])){
 } else {
     $cartID = false;
 }
-$query= "SELECT price FROM `products` WHERE `id` = $id";
+$query= "SELECT `price` FROM `products` WHERE `id` =  " .$id;
 $result = mysqli_query($conn, $query);
 
 if(!$result){
@@ -70,7 +70,7 @@ $cartID = mysqli_insert_id($conn);
  
 }
 
-$insertCartItems = "INSERT INTO cartitems SET `count` = $count, `productID` = $id, `price`= $price, `cartID` = $cartID 
+$insertCartItems = "INSERT INTO cartItems SET `count` = $count, `productID` = $id, `price`= $price, `cartID` = $cartID 
    ON DUPLICATE KEY UPDATE `count` = count + 1";
 
 $insertCartItemsResult = mysqli_query($conn, $insertCartItems);
