@@ -1,8 +1,50 @@
-{
+[
+  {
   "id": 1,
   "name": "Shake Weight",
   "price": 2999,
-  "image": "https://bit.ly/2JtVNE6",
+  "image": ["https://bit.ly/2JtVNE6","images/shakeweight1.jpeg" ],
   "shortDescription": "Dynamic Inertia technology ignites muscles in arms, shoulders, and chest.",
   "longDescription": "Shaking up the way you work out, the Shake Weight is a revolution in strength training. Boasting a legion of devotees who enthusiastically confirm the Shake Weight's claim that it shapes and tones the upper body, this product is hard to ignore.\nThe way it works is this: a special pulsating dumbbell with dynamic inertia technology increases upper body muscle activity by 300 percent compared to traditional weights as you shake the 5-lb weight several different ways. This repetitive shaking stimulates muscle toning and adds shape to your upper arms, chest, and shoulders.\nThe Upper Body Sculpting DVD shows you the proper way to use the Shake Weight so you see the most benefits. It works in only six minutes a day, though if you use it more often, you're likely to see results sooner."
+},
+{
+  "id": 2,
+  "name": "ShamWow",
+  "price": 2595,
+  "image": ["https://bit.ly/2w9C3Nm","images/shamwow1.jpeg"],
+  "shortDescription": "It's like a chamois, towel, and sponge, all in one! Soaks up to 10x it's weight in any liquid!",
+  "longDescription":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper quam enim, et elementum ante mattis quis. Maecenas rutrum velit quis vehicula convallis. Maecenas volutpat interdum arcu, in dictum urna blandit eu. Cras nec semper ex, ut tincidunt urna. Etiam euismod posuere felis vitae tempus. Phasellus ac orci ex. Nam non risus in leo aliquam accumsan. Vestibulum sagittis, lacus a efficitur aliquam, metus odio viverra nulla, sit amet egestas diam metus at metus."
+},
+{
+  "id": 3,
+  "name": "Snuggie",
+  "price": 2900,
+  "image": ["https://bit.ly/2LVHYAk","images/snuggie1.jpeg"],
+  "shortDescription": "Super-Soft Fleece with pockets! One Size fits all Adults! Keeps you Warm & Your Hands-Free!",
+  "longDescription":"Donec nec eros eu nulla convallis pharetra varius vel ipsum. Fusce accumsan massa sit amet urna tempus viverra. Duis consequat libero nunc, ac pellentesque justo consectetur vitae. Pellentesque pharetra eros tortor, et porttitor nisl mattis sed. Nam sit amet eros in odio aliquet venenatis non vel nulla. Phasellus ut maximus enim, in efficitur nunc. Fusce in felis tincidunt, auctor eros eget, cursus augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+},
+{
+  "id": 4,
+  "name": "Wax Vac",
+  "price": 999,
+  "image": ["https://bit.ly/2EjCU2a","images/waxvac1.jpeg"],
+  "shortDescription": "Gentle way to remove ear wax. Safe and hygienic. Reduces the risk of painful infections.",
+  "longDescription": "Nam felis ex, tempus sit amet ornare ac, dictum nec augue. Integer nec quam at dui ultricies sollicitudin. Morbi finibus justo dui, eget malesuada metus blandit a. Aliquam tellus velit, hendrerit ac sodales sed, cursus ut lacus. Morbi metus est, commodo quis nisi in, suscipit sollicitudin libero. Mauris pulvinar arcu at eros feugiat ultrices. Vivamus varius nibh nisl, et aliquet massa dignissim eu. Etiam neque purus, interdum id dictum at, tristique sit amet ex."
+},
+{
+  "id": 5,
+  "name": "Ostrich Pillow",
+  "price": 9900,
+  "image": ["https://bit.ly/2VD80b8","images/ostrichpillow1.jpeg"],
+  "shortDescription": "Create your own snugly space in the world and feel-good anywhere with the ultimate cocoon pillow.",
+  "longDescription":"Nunc lacinia et elit quis fringilla. Ut ut sem quis nisl rutrum molestie vel vel turpis. Nulla eget lobortis orci, eu rutrum tellus. Etiam sagittis magna in lectus suscipit, sit amet semper enim placerat. Morbi consectetur nulla a volutpat pulvinar. Curabitur purus neque, cursus non rhoncus vel, ornare nec purus. Quisque a pharetra est, et posuere purus."
+},
+{
+  "id": 6,
+  "name": "Tater Mitts",
+  "price": 830,
+  "image": ["https://bit.ly/2w9EmzO","images/tatermitts1.jpeg"],
+  "shortDescription": "8 Seconds is All You Need with Tater Mitts Quickly and easily prepare all your favorite potato dishes with Tater Mitts.",
+  "longDescription": "Maecenas finibus faucibus nisl eget congue. Nam scelerisque fermentum sodales. Duis cursus blandit lectus, quis vestibulum diam varius vitae. Nulla dapibus turpis et hendrerit sollicitudin. Pellentesque at lorem ut sem consectetur viverra. Duis et libero urna. Maecenas dapibus orci lectus, eget mollis tellus lobortis non"
 }
+]
