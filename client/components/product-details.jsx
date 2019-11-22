@@ -9,9 +9,9 @@ export default class ProductDetails extends React.Component {
   }
   componentDidMount() {
     const paramId = this.props.params.view.params.id;
-    fetch(`/api/products.php?id= ` + paramId)
+    fetch(`/api/products.php?id=` + paramId)
       .then(response => response.json())
-      .then(data => this.setState({ product: data }));
+      .then(data => this.setState({ product: data[0] }));
   }
   render() {
     if (this.state.product !== null) {
