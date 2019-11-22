@@ -16,6 +16,6 @@ if ($method == 'GET') {
     'error' => 'Not Found',
     'message' => "Cannot $method /api/cart.php"
   ]));
-}
 
+  }
 ?>

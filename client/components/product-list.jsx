@@ -8,6 +8,7 @@ export default class Productlist extends React.Component {
       products: []
     };
   }
+
   componentDidMount() {
     this.getProducts();
   }
